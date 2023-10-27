@@ -1,4 +1,3 @@
-// applicable to weekly cases data by symptoms onset date
 functions {
 	real[] SEIR(real t, 
 							real[] y, 
@@ -19,7 +18,7 @@ functions {
 
 		real y0_vars[7];
 
-		row_vector[7] dydt;       //  an array containing the derivative of all the compartment arrange in the order S, E1, E2, I1, I2, R, and Inci 
+		row_vector[7] dydt;       
 		
 		int Nh;
 		real b;
@@ -79,7 +78,7 @@ functions {
 data {
 	// Structure
 	int TotalPop;
-	int n_months;       // total number of weeks
+	int n_months;       // total number of months
 	real t0;            //starting time
 	real ts[n_months];  
 	int doprint;
